@@ -1,0 +1,22 @@
+server:
+  port: 9002
+  
+spring:  jpa:    hibernate:      ddl-auto: update
+    show-sql: true
+#Oracle Settings   
+  datasource:    url: jdbc:oracle:thin:@localhost:1522:orcl
+    username: system
+    password: Vamshi123
+    driver-class-name: oracle.jdbc.OracleDriver
+  
+      
+ #Logging      
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.javatechie.spring.logging.api: DEBUG
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file: F:/Java Applications/logging/springbootlog/api.log
+#need to change version in pom.xml <version>2.4.4</version>
